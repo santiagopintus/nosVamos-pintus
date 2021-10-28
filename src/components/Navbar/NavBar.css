@@ -1,0 +1,7 @@
+.navbar.navbar-light {
+    background-color: #ffffff!important;
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .4);
+}
+.navbar-brand img {
+    max-width: 5rem;
+}
