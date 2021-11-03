@@ -1,0 +1,8 @@
+.carrito {
+    align-items: center;
+    gap: 3px;
+}
+
+.carrito img {
+    min-width: 2.7rem;
+}

@@ -1,3 +1,6 @@
+import './NavBar.css';
+import CartWidget from '../cartWidget/cartWidget';
+
 export default function Navbar(props) {
     return (
         <>
@@ -5,7 +8,7 @@ export default function Navbar(props) {
                 <div className="container-fluid">
             
                     <a className="navbar-brand" href="index.html">
-                        <img src={props.logo} alt="logo de Vamonos" />
+                        <img src={props.logoSrc} alt="logo de Vamonos" />
                     </a>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +44,16 @@ export default function Navbar(props) {
                                 <a href="index.html" className="nav-link">Contacto</a>
                             </li>
                         </ul>
-                
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
+                        <div className="d-flex align-center gap-3">
+                            
+                            <CartWidget carritoCount="2"/>
+                            
+                            <form className="d-flex">
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                <button className="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
