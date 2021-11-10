@@ -25,7 +25,11 @@ const ItemCount = (props) => {
     const onAdd = (quantity) => {
         setAddedToCart({added: true, quantity: quantity});
         props.onAdd(quantity);
-        reset();  
+        reset();
+
+        setTimeout(() => {
+            setAddedToCart({added: false, quantity: 0});
+        }, 3000);
     };
 
     return (
@@ -55,7 +59,7 @@ const ItemCount = (props) => {
                 {
                     addedToCart.added &&
 
-                    <p className="added-to-cart">{ addedToCart.quantity } items agregados al carrito</p>
+                    <p className="added-to-cart">{addedToCart.quantity} items agregados al carrito</p>
                 }
 
             </div>
