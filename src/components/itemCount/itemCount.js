@@ -1,22 +1,27 @@
 import { useState } from 'react';
 import './itemCount.css';
 
-const ItemCount = (stock, initial) => {
+const ItemCount = (props) => {
 
-    let [count, setCount] = useState(initial);
+    let [count, setCount] = useState(props.initial);
 
     const increment = () => {
-        if (stock > count && stock > 0) {
+        if (props.stock > count && props.stock > 0) {
             setCount(count + 1)
         }
     };
         
     const decrement = () => {
-        if (count > 1 && stock > 0) {
+        if (count > 1 && props.stock > 0) {
             setCount(count - 1)
         }
     };
     const reset = () => setCount(0);
+
+    const onAdd = (quantity) => {
+        props.onAdd(quantity);
+        reset();  
+    };
 
     return (
         <>
@@ -35,7 +40,7 @@ const ItemCount = (stock, initial) => {
                 </button>
                 
                 {
-                    stock <= 0 &&
+                    props.stock <= 0 &&
                     <p className="stock-error">Sin stock</p>
                 }
 

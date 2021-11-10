@@ -11,9 +11,14 @@ function App() {
       <NavBar
         logoSrc="images/logo/logo192.png"
       />
-      <ItemListContainer
-        greeting="Te doy la bienvenida! Espero que encuentres lo que buscas!"
-      />
+
+      <main className="container">
+        
+        <ItemListContainer
+          greeting="Te doy la bienvenida! Espero que encuentres lo que buscas!"
+        />
+        
+      </main>
     </>
   );
 }
