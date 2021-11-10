@@ -4,7 +4,7 @@ import ItemCount from '../itemCount/itemCount';
 const ItemListContainer = (props) => {
 
     const onAdd = (quantity) => {
-        console.log(quantity);
+        console.log(`${quantity} items agregados al carrito`);
     };
 
     return (
