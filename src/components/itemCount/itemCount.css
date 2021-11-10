@@ -42,3 +42,12 @@
     font-weight: 700;
     padding: .5rem;
 }
+
+.item-counter-container .add-icon {
+    min-width: 3.6rem;
+    padding: 0;
+}
+
+.item-counter-container .add-icon[disabled] {
+    opacity: .5;
+}
