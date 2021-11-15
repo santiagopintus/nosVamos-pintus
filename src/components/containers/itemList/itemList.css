@@ -1,0 +1,17 @@
+.items-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 640px) {
+    .items-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .items-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

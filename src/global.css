@@ -1,0 +1,24 @@
+/* Global styles and variables */
+:root {
+    --primary-color: #9db5b2;
+    --secondary-color: #94d1be;
+    --accent: #daf0ee;
+    --white: #ffffff;
+    --black: #3b413c;
+}
+
+.btn-primary {
+    background-color: var(--white)!important;
+    border: none!important;
+    color: var(--black)!important;
+}
+.btn-primary:hover {
+    background-color: var(--primary-color)!important;
+    color: var(--white)!important;
+}
+
+.container {
+    width: 95%!important;
+    max-width: 120rem!important;
+    margin: 0 auto!important;
+}

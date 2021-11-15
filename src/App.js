@@ -1,9 +1,11 @@
 
 import './App.css';
+import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import NavBar from './components/Navbar/NavBar';
-import ItemListContainer from './components/itemListContainer/itemListContainer';
+import ItemListContainer from './components/containers/itemListContainer/itemListContainer';
+import Footer from './components/footer/footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         </Routes>  
         
       </main>
+
+      <Footer/>
     </BrowserRouter>
   );
 }

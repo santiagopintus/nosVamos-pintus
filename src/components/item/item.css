@@ -1,0 +1,20 @@
+.item {
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.item__image-container img{
+    max-width: 100%;
+}
+.item__info {
+    padding: 1rem;
+}
+
+.item__options {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}

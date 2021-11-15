@@ -1,7 +1,7 @@
 .item-counter-container {
     position: relative;
     display: flex;
-    gap: 2rem;
+    gap: .5rem;
     align-items: center;
     max-width: fit-content;
 }
@@ -26,7 +26,7 @@
 .delete-icon,
 .add-icon {
     border: none;
-    background: #ffffff;
+    background: var(--accent);
 }
 
 .item-counter-container .stock-error {
@@ -50,4 +50,16 @@
 
 .item-counter-container .add-icon[disabled] {
     opacity: .5;
+}
+
+.item-counter-container .added-alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25%;
+    width: fit-content;
+    padding: 5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
 }

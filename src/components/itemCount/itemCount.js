@@ -59,7 +59,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 {
                     addedToCart.added &&
 
-                    <p className="added-to-cart">{addedToCart.quantity} items agregados al carrito</p>
+                    <div className="added-alert">
+                        <p className="added-to-cart">
+                            {addedToCart.quantity} {addedToCart.quantity > 1 ? 'items agregados' : 'item agregado'} al carrito
+                        </p>
+                    </div>
                 }
 
             </div>
