@@ -1,19 +1,17 @@
+import Carousel from '../carousel/carousel';
 import ItemCount from '../itemCount/itemCount';
 import './item.css';
 
-const Item = ({key, item, onAdd}) => {
-    const imgPath = 'images/products/'
-    const imgExt = '.webp'
-    const imgSrc = `${imgPath}${item.imgSrc[0]}${imgExt}`;
+const Item = ({item, onAdd}) => {
+    const images = item.imgSrc
 
     return (
         <>
             {/* Comienza el item */}
             <div className="item">
-                <p>{key}</p>
                 {/* La imagen del item */}
                 <div className="item__image-container">
-                    <img src={imgSrc} alt={item.title}/>
+                    <Carousel controls={'carouselControl'+item.id} images={images} imgAlt={item.title}/>
                 </div>
 
                 {/* La información del item */}
