@@ -1,7 +1,7 @@
 import ItemCount from '../itemCount/itemCount';
 import './item.css';
 
-const Item = ({key, item, onAdd}) => {
+const Item = ({item, onAdd}) => {
     const imgPath = 'images/products/'
     const imgExt = '.webp'
     const imgSrc = `${imgPath}${item.imgSrc[0]}${imgExt}`;
@@ -10,7 +10,6 @@ const Item = ({key, item, onAdd}) => {
         <>
             {/* Comienza el item */}
             <div className="item">
-                <p>{key}</p>
                 {/* La imagen del item */}
                 <div className="item__image-container">
                     <img src={imgSrc} alt={item.title}/>
