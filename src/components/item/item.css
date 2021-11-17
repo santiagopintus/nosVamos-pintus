@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .item__image-container img{

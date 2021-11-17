@@ -5,6 +5,7 @@ import products from '../../../data/products';
 import customFetch from '../../../utils/customFetch';
 
 const ItemListContainer = (props) => {
+    
     const [items, setItems] = useState([]);
 
     /* Obteniendo los items usando promise */

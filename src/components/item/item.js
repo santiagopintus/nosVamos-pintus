@@ -1,6 +1,9 @@
-import Carousel from '../carousel/carousel';
+// import Carousel from '../carousel/carousel';
 import ItemCount from '../itemCount/itemCount';
 import './item.css';
+// import SwiperCarousel from '../swiperCarousel/swiperCarousel';
+import SplideCarousel from '../splideCarousel/splideCarousel';
+// import "swiper/css/bundle";
 
 const Item = ({item, onAdd}) => {
     const images = item.imgSrc
@@ -11,7 +14,7 @@ const Item = ({item, onAdd}) => {
             <div className="item">
                 {/* La imagen del item */}
                 <div className="item__image-container">
-                    <Carousel controls={'carouselControl'+item.id} images={images} imgAlt={item.title}/>
+                    <SplideCarousel images={images} imgAlt={item.title} />
                 </div>
 
                 {/* La información del item */}
