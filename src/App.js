@@ -7,6 +7,7 @@ import NavBar from './components/Navbar/NavBar';
 import ItemListContainer from './components/containers/itemListContainer/itemListContainer';
 import Footer from './components/footer/footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/containers/itemDetailContainer/itemDetailContainer';
 
 function App() {
   return (
@@ -18,9 +19,12 @@ function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={
-            <ItemListContainer
-            greeting="Te doy la bienvenida! Espero que encuentres lo que buscas!"
-          />
+            <>
+              <ItemListContainer
+              greeting="Te doy la bienvenida! Espero que encuentres lo que buscas!"
+              />
+              <ItemDetailContainer/>
+            </>
           } />
         </Routes>  
         

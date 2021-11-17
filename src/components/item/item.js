@@ -1,10 +1,12 @@
+// import Carousel from '../carousel/carousel';
 import ItemCount from '../itemCount/itemCount';
 import './item.css';
+// import SwiperCarousel from '../swiperCarousel/swiperCarousel';
+import SplideCarousel from '../splideCarousel/splideCarousel';
+// import "swiper/css/bundle";
 
 const Item = ({item, onAdd}) => {
-    const imgPath = 'images/products/'
-    const imgExt = '.webp'
-    const imgSrc = `${imgPath}${item.imgSrc[0]}${imgExt}`;
+    const images = item.imgSrc
 
     return (
         <>
@@ -12,7 +14,7 @@ const Item = ({item, onAdd}) => {
             <div className="item">
                 {/* La imagen del item */}
                 <div className="item__image-container">
-                    <img src={imgSrc} alt={item.title}/>
+                    <SplideCarousel images={images} imgAlt={item.title} />
                 </div>
 
                 {/* La información del item */}

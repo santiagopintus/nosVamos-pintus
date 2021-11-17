@@ -1,10 +1,10 @@
 const products = [
     {
         id: 0,
-        title: 'Aceiteros Pequeños',
+        title: '2 Aceiteros Pequeños',
         price: 390,
         imgSrc: ['aceiteros-pequeños 1', 'aceiteros-pequeños 2'],
-        description: 'A large phone with one of the best screens',
+        description: 'Dos aceiteros autóctonos del norte de Argentina. Estos aceiteros de barro cocido al sol, son excelentes para servir diferentes aceites en la mesa para condimentar las comidas. Medidas: 7cm alto x 3cm ancho.',
         stock: 1
     },
     {
@@ -18,7 +18,7 @@ const products = [
     {
         id: 2,
         title: 'Azucarera de Jujuy ornamentada',
-        price: 1790,
+        price: 720,
         imgSrc: ['azucarera-2-jujuy 1', 'azucarera-2-jujuy 2', 'azucarera-2-jujuy 3'],
         description: 'A large phone with one of the best screens',
         stock: 1
@@ -26,7 +26,7 @@ const products = [
     {
         id: 3,
         title: 'Azucarera de Jujuy negra',
-        price: 1560,
+        price: 560,
         imgSrc: ['azucarera-jujuy'],
         description: 'A large phone with one of the best screens',
         stock: 1
@@ -49,26 +49,26 @@ const products = [
     },
     {
         id: 6,
-        title: 'Varios canastos de mimbre',
-        price: 2300,
+        title: '6 canastos de mimbre',
+        price: 1790,
         imgSrc: ['canastos-mimbre-varios 1', 'canastos-mimbre-varios 2', 'canastos-mimbre-varios 3'],
         description: 'Praesent accumsan ipsum vel lorem feugiat, non pellentesque lorem convallis. ,Maecenas nulla felis, sagittis sed efficitur tincidunt, elementum ut sem. Fusce tincidunt quis dolor consequat fringilla.',
         stock: 1
     },
     {
         id: 7,
-        title: 'Cazuelas pequeñas de barro',
+        title: 'Juego de cazuelas para picadas',
         price: 1700,
         imgSrc: ['cazuelas 1', 'cazuelas 2', 'cazuelas 3', 'cazuelas 4', 'cazuelas 5'],
-        description: 'Praesent accumsan ipsum vel lorem feugiat, non pellentesque lorem convallis. ,Maecenas nulla felis, sagittis sed efficitur tincidunt, elementum ut sem. Fusce tincidunt quis dolor consequat fringilla.',
+        description: '8 Cazuelas de arcilla para picadas. El juego cuenta con 6 cazuelas chicas de 7cm de ancho x 3cm de alto y 2 más grandes de 9cm de ancho x 4cm de alto. Estas cazuelas son geniales para ',
         stock: 1
     },
     {
         id: 8,
-        title: 'Compoteras antiguas de cerámica',
-        price: 1700,
+        title: 'Juego de compoteras antiguas de cerámica',
+        price: 1800,
         imgSrc: ['compoteras-ceramica 1', 'compoteras-ceramica 2', 'compoteras-ceramica 3', 'compoteras-ceramica 4'],
-        description: 'Praesent accumsan ipsum vel lorem feugiat, non pellentesque lorem convallis. ,Maecenas nulla felis, sagittis sed efficitur tincidunt, elementum ut sem. Fusce tincidunt quis dolor consequat fringilla.',
+        description: '6 compoteras de marca Kibon hechas en cerámica. Medidas: 6cm alto x 8cm diámetro x 6mm de grosor',
         stock: 1
     },
 ];
