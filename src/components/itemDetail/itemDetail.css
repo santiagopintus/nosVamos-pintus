@@ -1,0 +1,33 @@
+.item-detail {
+    background-color: var(--primary-color);
+    margin: 5rem auto;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+}
+
+.item-detail__carousel .slide__image {
+    width: 100%;
+}
+.item-detail__info {
+    padding: 2rem;
+}
+.item-detail__info .item-detail__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.item-detail__info .item-detail__price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .item-detail__carousel, .item-detail {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+    .item-detail {
+        margin-top: 5rem;
+    }
+}

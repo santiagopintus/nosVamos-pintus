@@ -8,24 +8,17 @@ const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
 
-    /* Obteniendo los items usando promise */
+    /* Obteniendo el item usando promise */
     useEffect(() => {
-        customFetch(2000, products[1])
-            .then(result => {
-                console.log(result)
+        customFetch(2000, products)
+            .then(productsArray => {
+                setItem(productsArray[7])
             })
-            .then(result => setItem(result))
-            .then(console.log(`Item seteado: ${item}`))
             .catch(err => console.log(`Error accediendo a los productos: ${err}`))
     }, [item]);
 
-    return (
-        <div>Testeando...
-            <div className="item-detail">
-                {/* <ItemDetail item={ item }/> */}
-                {products[0].title}
-            </div>    
-        </div>
+    return (    
+        <ItemDetail item={item}/>
     )
     
 }

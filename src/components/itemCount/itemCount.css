@@ -26,7 +26,7 @@
 .delete-icon,
 .add-icon {
     border: none;
-    background: var(--accent);
+    background: transparent;
 }
 
 .item-counter-container .stock-error {
@@ -62,4 +62,5 @@
     padding: 5rem;
     background-color: var(--primary-color);
     color: var(--white);
+    z-index: 999;
 }
