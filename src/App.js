@@ -18,16 +18,10 @@ function App() {
 
       <main className="container">
         <Routes>
-          <Route path="/" element={
-            <>
-              <ItemListContainer
-              greeting="Te doy la bienvenida! Espero que encuentres lo que buscas!"
-              />
-              <ItemDetailContainer/>
-            </>
-          } />
-        </Routes>  
-        
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:idCategory' element={<ItemListContainer />} />
+          <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+        </Routes>
       </main>
 
       <Footer/>

@@ -61,6 +61,7 @@
     width: fit-content;
     padding: 5rem;
     background-color: var(--primary-color);
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, .6);
     color: var(--white);
     z-index: 999;
 }

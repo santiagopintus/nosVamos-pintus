@@ -6,11 +6,18 @@ const ItemList = ({ items, onAdd }) => {
     return (
         <>
             <div className="items-container">
-                {items.map((item) => {
+
+                {
+                items.length > 0 ?
+                
+                items.map((item) => {
                     return (
-                        <Item key={item.id} item={item} onAdd={ onAdd }/>
+                        <Item id={item.id} key={item.id} src={item.imgSrc} price={item.price} stock={item.stock} title={item.title} onAdd={ onAdd }/>
                     )
-                })} 
+                })
+                :
+                <p>Cargando los productos...</p>
+                } 
             </div>
         </>
     );

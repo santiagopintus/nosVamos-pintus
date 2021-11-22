@@ -42,13 +42,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <button className="btn btn-secondary" onClick={increment}>+</button>
                 </div>
                 <button className="delete-icon" onClick={reset} title="Resetear item">
-                    <img src="images/icons/delete_icon.svg" alt="Icono de resetear la cantidad del item seleccionado"></img>
+                    <img src="https://i.ibb.co/HdWm5wT/delete-icon.png" alt="Icono de resetear la cantidad del item seleccionado"></img>
                 </button>
                 <button className="add-icon" title="Agregar al carrito"
                     onClick={() => onAddToCart(count)}
                     disabled={count === 0 || stock === 0}
                 >
-                    <img src="images/icons/addToCart.svg" alt="Icono de agregar al carrito"></img>
+                    <img src="https://i.ibb.co/Jz1z0pN/add-To-Cart.png" alt="Icono de agregar al carrito"></img>
                 </button>
                 
                 {

@@ -1,5 +1,6 @@
 .items-container {
     display: grid;
+    margin-top: 5rem;
     gap: 1rem;
     grid-template-columns: 1fr;
 }

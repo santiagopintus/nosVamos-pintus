@@ -9,7 +9,7 @@ export default function Navbar(props) {
                 <div className="container-fluid">
             
                     <Link className="navbar-brand" to="/">
-                        <img src={props.logoSrc} alt="logo de Vamonos" />
+                        <img src='https://i.ibb.co/ZgRmktK/logo192.png' alt="logo de Vamonos" />
                     </Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,27 +23,16 @@ export default function Navbar(props) {
                                 <Link className="nav-link active" aria-current="page" to="/">Inicio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Entretenimiento</Link>
-                            </li>
-                            <li className="nav-item dropdown">
-                    
-                                <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Muebles</Link>
-
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <Link className="dropdown-item" to="/">Mesas</Link>
-                                    </li>
-                                    <li>
-                                        <Link className="dropdown-item" to="/">Sillas</Link>
-                                    </li>
-                                    <li>
-                                        <Link className="dropdown-item" to="/">Dispenseros</Link>
-                                    </li>
-                                </ul>
+                                <Link className="nav-link" to="/category/decorativo">Decorativos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Contacto</Link>
+                                <Link className="nav-link" to="/category/vajilla">Vajillas</Link>
                             </li>
+
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/category/varios">Varios</Link>
+                            </li>
+                        
                         </ul>
 
                         <div className="d-flex align-center gap-3">

@@ -23,7 +23,7 @@ const SplideCarousel = ({images, imgAlt, isItemDetail = false}) => {
         >
             {images.map((src, index) => (
                 <SplideSlide key={index}>
-                    <img className="slide__image" key={index} src={`images/products/${src}.webp`}
+                    <img className="slide__image" key={index} src={src}
                         alt={imgAlt}
                     />
                 </SplideSlide>
