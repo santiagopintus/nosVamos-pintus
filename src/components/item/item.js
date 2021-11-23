@@ -6,7 +6,7 @@ import SplideCarousel from '../splideCarousel/splideCarousel';
 import { Link } from 'react-router-dom';
 // import "swiper/css/bundle";
 
-const Item = ({id, title, src, price, stock, onAdd}) => {
+const Item = ({id, title, src, price}) => {
 
     return (
         <>
@@ -23,7 +23,6 @@ const Item = ({id, title, src, price, stock, onAdd}) => {
                     <p className="item__price">${price}</p>
                     <div className="item__options">
                         <Link to={`/item/${id}`}><button className="item__details-btn btn btn-primary">Detalles</button></Link>
-                        {/* <ItemCount stock={stock} initial={0} onAdd={ onAdd }/> */}
                     </div>
                 </div>
 

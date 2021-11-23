@@ -6,3 +6,7 @@
 .carrito img {
     min-width: 2.7rem;
 }
+
+.carrito .badge-carrito {
+    text-decoration: none!important;
+}

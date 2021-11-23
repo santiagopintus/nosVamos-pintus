@@ -10,7 +10,7 @@ const CartWidget = (props) => {
                     props.carritoCount > 0 ?
                     <>
                         <img src="https://i.ibb.co/P5vVXQh/cart-Widget-full.png" alt="El icono de un carrito de compras lleno" />
-                        <span className="badge bg-secondary">{props.carritoCount}</span>
+                        <span className="badge bg-secondary badge-carrito">{props.carritoCount}</span>
                     </>
                     :
                     //No se muestra el badge cuando no hay items    
