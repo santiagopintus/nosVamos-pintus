@@ -4,6 +4,7 @@ import './itemCount.css';
 const ItemCount = ({stock, initial, onAdd}) => {
 
     let [count, setCount] = useState(initial);
+    
     let [addedToCart, setAddedToCart] = useState({
         added: false,
         quantity: 0,

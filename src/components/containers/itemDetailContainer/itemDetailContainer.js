@@ -10,13 +10,12 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { idItem } = useParams();
 
-    
     /* Obteniendo el item usando promise */
     useEffect(() => {
         customFetch(2000, products.find(item => item.id === parseInt(idItem)))
             .then(result => setItem(result))
             .catch(err => console.log(err))
-    }, []);
+    }, [idItem]);
 
     return (    
         <ItemDetail item={item}/>

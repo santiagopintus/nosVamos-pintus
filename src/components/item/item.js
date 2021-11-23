@@ -1,10 +1,6 @@
-// import Carousel from '../carousel/carousel';
-import ItemCount from '../itemCount/itemCount';
 import './item.css';
-// import SwiperCarousel from '../swiperCarousel/swiperCarousel';
 import SplideCarousel from '../splideCarousel/splideCarousel';
 import { Link } from 'react-router-dom';
-// import "swiper/css/bundle";
 
 const Item = ({id, title, src, price}) => {
 

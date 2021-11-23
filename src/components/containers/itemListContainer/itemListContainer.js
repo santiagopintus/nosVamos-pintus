@@ -4,13 +4,11 @@ import products from '../../../data/products';
 import customFetch from '../../../utils/customFetch';
 import { useParams } from 'react-router';
 
-const ItemListContainer = (props) => { 
+const ItemListContainer = () => { 
     
     const [items, setItems] = useState([]);
 
     const { idCategory } = useParams()
-
-    console.log(idCategory);
 
     //componentDidUpdate
     useEffect(() => {
@@ -20,15 +18,11 @@ const ItemListContainer = (props) => {
         }))
             .then(result => setItems(result))
             .catch(err => console.log(err))
-    }, [items]);
-
-    const onAdd = (quantity) => {
-        console.log(`${quantity} items agregados al carrito`);
-    };
+    }, [items, idCategory]);
 
     return (
         <>
-            <ItemList items={items} onAdd={ onAdd } />
+            <ItemList items={items}/>
         </>
     )
 };

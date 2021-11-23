@@ -1,9 +1,19 @@
 import './itemDetail.css';
 import SplideCarousel from '../splideCarousel/splideCarousel';
 import ItemCount from '../itemCount/itemCount';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
     const images = item.imgSrc
+
+    let [itemAdded, setItemAdded] = useState(false);
+    
+    const onAdd = () => {
+        setTimeout(() => {
+            setItemAdded(true);
+        }, 3000);
+    }
 
     return (
         <>
@@ -11,7 +21,6 @@ const ItemDetail = ({ item }) => {
 
                 {!item.title ?
                     <p className="cargando-msg">Cargando item...</p>
-
                     :
                     <>
                         <div className="item-detail__carousel">
@@ -23,7 +32,16 @@ const ItemDetail = ({ item }) => {
                             <p className="item-detail__stock">Stock: {item.stock}</p>
                             <p className="item-detail__price">${item.price}</p>
                             
-                            <ItemCount stock={item.stock} initial={0} onAdd={() => {}}/>
+                            {!itemAdded ?
+                                <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+                                :
+                                <>
+                                    <p className="item-detail__added">Item agregado al carrito</p>
+                                    <Link to="/cart">
+                                        <button className="btn btn-secondary">Ir al carrito</button>
+                                    </Link>
+                                </>
+                            }
                         </div>
                     </>
                 }
