@@ -1,9 +1,16 @@
 import './itemDetail.css';
 import SplideCarousel from '../splideCarousel/splideCarousel';
 import ItemCount from '../itemCount/itemCount';
+import { useState } from 'react';
 
 const ItemDetail = ({ item }) => {
     const images = item.imgSrc
+
+    const { itemAdded, setItemAdded } = useState(false);
+
+    const onAdd = () => {
+        setItemAdded(true);
+    }
 
     return (
         <>
@@ -22,7 +29,10 @@ const ItemDetail = ({ item }) => {
                             <p className="item-detail__description">{item.description}</p>
                             <p className="item-detail__stock">Stock: {item.stock}</p>
                             <p className="item-detail__price">${item.price}</p>
-                            <ItemCount stock={item.stock} initial={0} onAdd={() => {}}/>
+                            {
+                                !itemAdded &&
+                                <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                            }
                         </div>
                     </>
                 }
