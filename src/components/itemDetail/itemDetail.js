@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
             <div className="item-detail">
 
                 {!item.title ?
-                    <p>Cargando item...</p>
+                    <p className="cargando-msg">Cargando item...</p>
 
                     :
                     <>

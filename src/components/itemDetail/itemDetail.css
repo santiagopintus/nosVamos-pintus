@@ -22,6 +22,14 @@
     margin-bottom: 1rem;
 }
 
+.cargando-msg {
+    padding: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0;
+}
+
 @media only screen and (min-width: 768px) {
     .item-detail__carousel, .item-detail {
         max-width: 75%;

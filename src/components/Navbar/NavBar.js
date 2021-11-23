@@ -37,7 +37,9 @@ export default function Navbar(props) {
 
                         <div className="d-flex align-center gap-3">
                             
-                            <CartWidget carritoCount="2"/>
+                            <Link to="/cart">
+                                <CartWidget carritoCount="2"/>
+                            </Link>
                             
                             <form className="d-flex">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

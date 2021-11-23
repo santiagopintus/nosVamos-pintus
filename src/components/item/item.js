@@ -13,9 +13,11 @@ const Item = ({id, title, src, price, stock, onAdd}) => {
             {/* Comienza el item */}
             <div className="item">
                 {/* La imagen del item */}
-                <div className="item__image-container">
-                    <SplideCarousel images={src} imgAlt={title} />
-                </div>
+                <Link to={`/item/${id}`}>
+                    <div className="item__image-container">
+                        <SplideCarousel images={src} imgAlt={title} />
+                    </div>
+                </Link>
 
                 {/* La información del item */}
                 <div className="item__info">
