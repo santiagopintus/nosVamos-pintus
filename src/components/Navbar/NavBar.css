@@ -5,3 +5,10 @@
 .navbar-brand img {
     max-width: 8rem;
 }
+
+.site-name {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    padding: 1rem;
+    margin-right: 2rem;
+}

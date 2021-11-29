@@ -25,3 +25,7 @@
     max-width: 120rem!important;
     margin: 0 auto!important;
 }
+
+.container-fluid {
+    width: 95%!important;
+}

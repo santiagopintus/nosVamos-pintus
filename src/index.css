@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --title-font: 'Pacifico', cursive;
+  --body-font: 'Roboto', sans-serif;
+}
 
 body, html {
   margin: 0;
@@ -11,7 +17,7 @@ html {
 
 *,*:before,*:after {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--body-font);
 }
 
 body, .btn, input, select, options, textarea, a, p {

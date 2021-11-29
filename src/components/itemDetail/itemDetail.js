@@ -3,16 +3,22 @@ import SplideCarousel from '../splideCarousel/splideCarousel';
 import ItemCount from '../itemCount/itemCount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../cartContext/cartContext';
 
 const ItemDetail = ({ item }) => {
+    const cartContext = useContext(CartContext);
+
     const images = item.imgSrc
 
-    let [itemAdded, setItemAdded] = useState(false);
+
+    let [itemAdded, setItemAdded] = useState();
     
-    const onAdd = () => {
+    const onAdd = (item, qty) => {
         setTimeout(() => {
             setItemAdded(true);
         }, 3000);
+        cartContext.addToCart(item, qty);
     }
 
     return (

@@ -1,7 +1,8 @@
 import './cartWidget.css'
+import constants from '../../utils/constants'
 
 const CartWidget = (props) => {
-
+    
     return (
         <>
             <button type="button" className="carrito btn d-flex">
@@ -9,12 +10,12 @@ const CartWidget = (props) => {
                     //Carga diferentes imágenes dependiendo del contenido del carrito
                     props.carritoCount > 0 ?
                     <>
-                        <img src="https://i.ibb.co/P5vVXQh/cart-Widget-full.png" alt="El icono de un carrito de compras lleno" />
+                        <img src={constants.iconsImgUrl + "cartWidget_full.svg"} alt="El icono de un carrito de compras lleno" />
                         <span className="badge bg-secondary badge-carrito">{props.carritoCount}</span>
                     </>
                     :
                     //No se muestra el badge cuando no hay items    
-                    <img src="https://i.ibb.co/Q8r1V7Z/cart-Widget-empty.png" alt="El icono de un carrito de compras vacío" />
+                    <img src={constants.iconsImgUrl + "cartWidget_empty.svg"} alt="El icono de un carrito de compras vacío" />
                 }
             </button>
         </>

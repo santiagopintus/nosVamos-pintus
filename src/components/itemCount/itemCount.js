@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './itemCount.css';
-
-const ItemCount = ({stock, initial, onAdd}) => {
+import constants from '../../utils/constants';
+const ItemCount = ({ stock, initial, onAdd }) => {
 
     let [count, setCount] = useState(initial);
     
@@ -25,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     const onAddToCart = (quantity) => {
         setAddedToCart({added: true, quantity: quantity});
-        onAdd();
+        onAdd(quantity);
         reset();
 
         setTimeout(() => {
@@ -43,13 +43,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <button className="btn btn-secondary" onClick={increment}>+</button>
                 </div>
                 <button className="delete-icon" onClick={reset} title="Resetear item">
-                    <img src="https://i.ibb.co/HdWm5wT/delete-icon.png" alt="Icono de resetear la cantidad del item seleccionado"></img>
+                    <img src={constants.iconsImgUrl + "delete_icon.svg"} alt="Icono de resetear la cantidad del item seleccionado"></img>
                 </button>
                 <button className="add-icon" title="Agregar al carrito"
                     onClick={() => onAddToCart(count)}
                     disabled={count === 0 || stock === 0}
                 >
-                    <img src="https://i.ibb.co/Jz1z0pN/add-To-Cart.png" alt="Icono de agregar al carrito"></img>
+                    <img src={constants.iconsImgUrl + "addToCart.svg"} alt="Icono de agregar al carrito"></img>
                 </button>
                 
                 {

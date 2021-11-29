@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 //Linkeo los estilos de la librería
 import '@splidejs/splide/dist/css/splide.min.css';
 import { Link } from 'react-router-dom';
-
+import constants from '../../utils/constants';
 const SplideCarousel = ({images, imgAlt, isItemDetail = false, itemId}) => {
     /* props: images: array de imagenes, imgAlt: string con el texto alternativo de la imagen */
     /* Crea un slide por cada imagen del producto que haya */
@@ -12,7 +12,6 @@ const SplideCarousel = ({images, imgAlt, isItemDetail = false, itemId}) => {
     if (typeof images === 'undefined') {
         images = [];
     }
-
     
     return (
         <Splide
@@ -26,12 +25,12 @@ const SplideCarousel = ({images, imgAlt, isItemDetail = false, itemId}) => {
                 <SplideSlide key={index}>
                     {/* Si el item es un detalle de producto, La imagen no tiene link */}
                     {isItemDetail ?
-                        <img className="slide__image" key={index} src={src}
+                        <img className="slide__image" key={index} src={constants.productsImgUrl + src}
                             alt={imgAlt}
                         />
                         :
                         <Link to={`/item/${itemId}`}>
-                            <img className="slide__image" key={index} src={src}
+                            <img className="slide__image" key={index} src={constants.productsImgUrl + src}
                                 alt={imgAlt}
                             />
                         </Link>

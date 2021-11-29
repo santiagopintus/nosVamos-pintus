@@ -9,7 +9,7 @@ export default function Navbar(props) {
                 <div className="container-fluid">
             
                     <Link className="navbar-brand" to="/">
-                        <img src='https://i.ibb.co/ZgRmktK/logo192.png' alt="logo de Vamonos" />
+                        <h2 className="site-name">Rajanding</h2>
                     </Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
