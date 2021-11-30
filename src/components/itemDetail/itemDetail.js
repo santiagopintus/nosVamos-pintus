@@ -14,11 +14,15 @@ const ItemDetail = ({ item }) => {
 
     let [itemAdded, setItemAdded] = useState();
     
-    const onAdd = (item, qty) => {
+    const onAdd = (qty) => {
         setTimeout(() => {
             setItemAdded(true);
         }, 3000);
         cartContext.addToCart(item, qty);
+    }
+
+    const itemInCart = () => {
+        return cartContext.isInCart(item.id);
     }
 
     return (
@@ -39,7 +43,13 @@ const ItemDetail = ({ item }) => {
                             <p className="item-detail__price">${item.price}</p>
                             
                             {!itemAdded ?
+                                <>
                                 <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+                                {
+                                    itemInCart() &&
+                                    <p className="item-detail__added">Este producto ya está en el carrito</p>
+                                }
+                                </>
                                 :
                                 <>
                                     <p className="item-detail__added">Item agregado al carrito</p>

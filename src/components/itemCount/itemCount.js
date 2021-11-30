@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import './itemCount.css';
 import constants from '../../utils/constants';
 const ItemCount = ({ stock, initial, onAdd }) => {
