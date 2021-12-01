@@ -4,11 +4,6 @@ import constants from '../../utils/constants';
 const ItemCount = ({ stock, initial, onAdd }) => {
 
     let [count, setCount] = useState(initial);
-    
-    let [addedToCart, setAddedToCart] = useState({
-        added: false,
-        quantity: 0,
-    });
 
     const increment = () => {
         if (stock > count && stock > 0) {
@@ -24,13 +19,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const reset = () => setCount(0);
 
     const onAddToCart = (quantity) => {
-        setAddedToCart({added: true, quantity: quantity});
         onAdd(quantity);
         reset();
-
-        setTimeout(() => {
-            setAddedToCart({added: false, quantity: 0});
-        }, 3000);
     };
 
     return (
@@ -55,16 +45,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 {
                     stock <= 0 &&
                     <p className="stock-error">Sin stock</p>
-                }
-
-                {
-                    addedToCart.added &&
-                    
-                    <div className="added-alert">
-                        <p className="added-to-cart">
-                            {addedToCart.quantity} {addedToCart.quantity > 1 ? 'items agregados' : 'item agregado'} al carrito
-                        </p>
-                    </div>
                 }
 
             </div>

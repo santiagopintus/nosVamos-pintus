@@ -1,6 +1,7 @@
 import './itemDetail.css';
 import SplideCarousel from '../splideCarousel/splideCarousel';
 import ItemCount from '../itemCount/itemCount';
+import Modal from '../modal/modal';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
@@ -11,13 +12,10 @@ const ItemDetail = ({ item }) => {
 
     const images = item.imgSrc
 
-
-    let [itemAdded, setItemAdded] = useState();
+    const [itemAdded, setItemAdded] = useState(false);
     
     const onAdd = (qty) => {
-        setTimeout(() => {
-            setItemAdded(true);
-        }, 3000);
+        setItemAdded(true);
         cartContext.addToCart(item, qty);
     }
 
@@ -52,10 +50,11 @@ const ItemDetail = ({ item }) => {
                                 </>
                                 :
                                 <>
-                                    <p className="item-detail__added">Item agregado al carrito</p>
+                                    {/* <p className="item-detail__added">Item agregado al carrito</p> */}
                                     <Link to="/cart">
-                                        <button className="btn btn-secondary">Ir al carrito</button>
+                                        <button className="btn btn-secondary">Terminar mi compra</button>
                                     </Link>
+                                    <Modal title="Agregado!" content="Producto agregado al carrito"/>
                                 </>
                             }
                         </div>

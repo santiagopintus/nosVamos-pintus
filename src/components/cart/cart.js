@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import constants from '../../utils/constants';
 import { CartContext } from '../cartContext/cartContext';
@@ -9,6 +9,12 @@ const Cart = () => {
 
     const cartContext = useContext(CartContext);
 
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        setTotal(cartContext.getTotal());
+    }, [cartContext]);
+
     return (
         <div className="cart">
             <h1>Bienvenido al carrito! <img src={constants.iconsImgUrl + "cartWidget_empty.png"} alt="Icono de un carrito"></img></h1>
@@ -18,7 +24,7 @@ const Cart = () => {
                     cartContext.cartList.length > 0 ?
                         <>
                             <div className="cart-opciones">
-                                <button onClick={cartContext.clear} className="btn btn-secondary">Vaciar carrito</button>
+                                <button onClick={cartContext.clear} className="btn btn-terciary">Vaciar carrito</button>
                                 <Link to="/">
                                     <button className="btn btn-secondary">Agregar productos</button>
                                 </Link>
@@ -54,6 +60,15 @@ const Cart = () => {
                         </div>
                 }
             </div>
+            
+            {
+                total > 0 &&
+                    
+                <div className="cart-total">
+                    <p>Total del carrito: ${total}</p>
+                </div>
+            }
+
         </div>
     );
 }

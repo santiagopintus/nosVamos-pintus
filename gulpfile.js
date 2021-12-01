@@ -19,4 +19,4 @@ function convertToWebp() {
         .pipe(dest(paths.imagenesWebp))
 }
 
-// exports.default = parallel(convertToWebp);
+exports.default = parallel(convertToWebp);
