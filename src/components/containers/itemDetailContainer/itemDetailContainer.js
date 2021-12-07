@@ -1,9 +1,8 @@
 import './itemDetailContainer.css';
-import customFetch from '../../../utils/customFetch';
-import products from '../../../data/products';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import ItemDetail from '../../itemDetail/itemDetail';
+import firestoreFetchOne from '../../../utils/firestoreFetchOne';
 
 const ItemDetailContainer = () => {
 
@@ -12,12 +11,12 @@ const ItemDetailContainer = () => {
 
     /* Obteniendo el item usando promise */
     useEffect(() => {
-        customFetch(2000, products.find(item => item.id === parseInt(idItem)))
-            .then(result => setItem(result))
-            .catch(err => console.log(err))
+        firestoreFetchOne(idItem)
+            .then(item => setItem(item))
+            .catch(err => console.log(err));
     }, [idItem]);
 
-    return (    
+    return (
         <ItemDetail item={item}/>
     )
     

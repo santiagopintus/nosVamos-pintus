@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
     const cartContext = useContext(CartContext);
 
     const images = item.imgSrc
-
+    console.log("itemdetail" + JSON.stringify(item));
     const [itemAdded, setItemAdded] = useState(false);
     
     const onAdd = (qty) => {
