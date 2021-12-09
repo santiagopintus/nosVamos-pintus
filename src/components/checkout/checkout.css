@@ -1,0 +1,25 @@
+.checkout-final-step h1 {
+    font-size: 2.4rem!important;
+}
+.checkout-final-step h2, .checkout-final-step h1 {
+    font-weight: 700!important;
+    margin-bottom: 2rem;
+}
+.datos-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem 0;
+}
+.checkout-total {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+@media only screen and (min-width: 768px) {
+    .datos-flex {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+}

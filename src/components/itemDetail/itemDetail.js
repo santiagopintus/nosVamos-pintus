@@ -5,13 +5,13 @@ import Modal from '../modal/modal';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { CartContext } from '../cartContext/cartContext';
+import { CartContext } from '../contexts/cartContext';
 
 const ItemDetail = ({ item }) => {
     const cartContext = useContext(CartContext);
 
     const images = item.imgSrc
-    console.log("itemdetail" + JSON.stringify(item));
+    
     const [itemAdded, setItemAdded] = useState(false);
     
     const onAdd = (qty) => {
@@ -54,7 +54,13 @@ const ItemDetail = ({ item }) => {
                                     <Link to="/cart">
                                         <button className="btn btn-secondary">Terminar mi compra</button>
                                     </Link>
-                                    <Modal title="Agregado!" content="Producto agregado al carrito"/>
+                                    <Modal title="Agregado!" content="Producto agregado al carrito"
+                                        button={
+                                            <Link to="/cart">
+                                                <button data-bs-dismiss="modal" className="btn btn-secondary">Ir al carrito</button>
+                                            </Link>
+                                        }
+                                    />
                                 </>
                             }
                         </div>

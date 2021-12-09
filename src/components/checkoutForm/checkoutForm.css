@@ -1,0 +1,47 @@
+.checkout-container {
+    margin: 5rem auto 0 auto;
+    padding: 2rem;
+    box-shadow: 0 3px 10px -4px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-container .checkout-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkout-container .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    max-width: 42rem;
+}
+
+.checkout-btn {
+    margin-top: 2rem;
+}
+
+.checkout-options button {
+    margin-bottom: 2rem;
+}
+.checkout-options button:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .checkout-container {
+        width: 70%;
+    }
+    .checkout-container .checkout-title {
+        font-size: 2.4rem;
+        text-align: start;
+    }
+    .checkout-options {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .checkout-options button {
+        margin: 0;
+    }
+}

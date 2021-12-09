@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import constants from '../../utils/constants';
-import { CartContext } from '../cartContext/cartContext';
+import { CartContext } from '../contexts/cartContext';
 import SplideCarousel from '../splideCarousel/splideCarousel';
 import './cart.css';
 
@@ -66,6 +66,7 @@ const Cart = () => {
                     
                 <div className="cart-total">
                     <p>Total del carrito: ${total}</p>
+                    <Link to="/checkout"><button className="btn btn-secondary checkout-btn">Comprar carrito</button></Link>
                 </div>
             }
 

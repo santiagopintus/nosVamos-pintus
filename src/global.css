@@ -10,9 +10,14 @@
     --borderRadius: .5rem;
 }
 
+.btn {
+    display: block!important;
+    width: 100%;
+    text-decoration: none!important;
+}
 .btn-primary {
     background-color: var(--white)!important;
-    border: none!important;
+    border: 1px solid var(--primary-color)!important;
     color: var(--black)!important;
 }
 .btn-primary:hover {
@@ -26,6 +31,13 @@
 .btn-terciary:hover {
     box-shadow: inset 0 0 0 2px var(--primary-color);
 }
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .container {
     width: 95%!important;
@@ -36,3 +48,10 @@
 .container-fluid {
     width: 95%!important;
 }
+
+@media only screen and (min-width: 768px) {
+    .btn {
+        display: inline-block!important;
+        width: fit-content;
+    }
+}   
