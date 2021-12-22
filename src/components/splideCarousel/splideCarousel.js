@@ -29,7 +29,7 @@ const SplideCarousel = ({images, imgAlt, isItemDetail = false, itemId}) => {
                             alt={imgAlt}
                         />
                         :
-                        <Link to={`/item/${itemId}`}>
+                        <Link className="no-text-dec" to={`/item/${itemId}`}>
                             <img className="slide__image" key={index} src={constants.productsImgUrl + src}
                                 alt={imgAlt}
                             />

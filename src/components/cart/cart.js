@@ -24,9 +24,9 @@ const Cart = () => {
                     cartContext.cartList.length > 0 ?
                         <>
                             <div className="cart-opciones">
-                                <button onClick={cartContext.clear} className="btn btn-terciary">Vaciar carrito</button>
-                                <Link to="/">
-                                    <button className="btn btn-secondary">Agregar productos</button>
+                                <button onClick={cartContext.clear} className="btn btn-secondary">Vaciar carrito</button>
+                                <Link className="btn btn-primary" to="/">
+                                    Agregar Productos
                                 </Link>
                             </div>
 
@@ -35,18 +35,21 @@ const Cart = () => {
                                 {cartContext.cartList.map((item, index) => {
                                     return (
                                         <div className="cart-item" key={index}>
-                                            <div className="cart-item-img">
-                                                <SplideCarousel images={item.imgSrc} imgAlt={item.title} itemId={item.id}></SplideCarousel>
+                                            <div className="cart-item-content">
+                                                <div className="cart-item-img">
+                                                    <SplideCarousel images={item.imgSrc} imgAlt={item.title} itemId={item.id}></SplideCarousel>
+                                                </div>
+                                                <div className="cart-item-info">
+                                                    <p className="cart-item-name">Producto: {item.title}</p>
+                                                    <p className="cart-item-price">${item.price}</p>
+                                                    <p className="cart-item-quantity">Cantidad: {item.qty}</p>
+                                                    <p className="cart-item-total">Total: ${item.price * item.qty}</p>
+                                                </div>
                                             </div>
-                                            <div className="cart-item-info">
-                                                <p className="cart-item-name">Producto: {item.title}</p>
-                                                <p className="cart-item-price">${item.price}</p>
-                                                <p className="cart-item-quantity">Cantidad: {item.qty}</p>
-                                                <p className="cart-item-total">Total: ${item.price * item.qty}</p>
-                                                <button onClick={() => cartContext.removeItem(item.id)} className="btn btn-secondary">
-                                                    <img src={constants.iconsImgUrl + "delete_icon.svg"} alt="Icono de borrar un producto del carrito"></img>
-                                                </button>
-                                            </div>
+                                            
+                                            <button onClick={() => cartContext.removeItem(item.id)} className="btn">
+                                                <img src={constants.iconsImgUrl + "delete_icon.svg"} alt="Icono de borrar un producto del carrito"></img>
+                                            </button>
                                         </div>
                                     )
                                 })
@@ -56,7 +59,7 @@ const Cart = () => {
                         :
                         <div className="cart-empty">
                             <p>Tu carrito está vacío</p>
-                            <Link to="/"><button className="btn btn-secondary">Agregar productos</button></Link>
+                            <Link className="btn btn-primary" to="/">Agregar productos</Link>
                         </div>
                 }
             </div>
@@ -66,7 +69,7 @@ const Cart = () => {
                     
                 <div className="cart-total">
                     <p>Total del carrito: ${total}</p>
-                    <Link to="/checkout"><button className="btn btn-secondary checkout-btn">Comprar carrito</button></Link>
+                    <Link className="btn btn-primary checkout-btn" to="/checkout">Comprar carrito</Link>
                 </div>
             }
 

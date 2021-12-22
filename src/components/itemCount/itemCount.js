@@ -28,9 +28,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             <div className="item-counter-container">
                 
                 <div className="item-counter btn-group">
-                    <button className="btn btn-secondary" onClick={decrement}>-</button>
+                    <button className="btn btn-primary" onClick={decrement}>-</button>
                     <p>{count}</p>
-                    <button className="btn btn-secondary" onClick={increment}>+</button>
+                    <button className="btn btn-primary" onClick={increment}>+</button>
                 </div>
                 <button className="delete-icon" onClick={reset} title="Resetear item">
                     <img src={constants.iconsImgUrl + "delete_icon.svg"} alt="Icono de resetear la cantidad del item seleccionado"></img>

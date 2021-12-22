@@ -1,4 +1,3 @@
-
 import './App.css';
 import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,6 +12,7 @@ import CartProvider from './components/contexts/cartContext';
 import UserProvider from './components/contexts/userContext';
 import CheckoutForm from './components/checkoutForm/checkoutForm';
 import Checkout from './components/checkout/checkout';
+import ToTopArrow from './components/toTopArrow/toTopArrow';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
               <Route path='/checkout/final-step' element={<Checkout />} />
             </Routes>
           </main>
-
+          <ToTopArrow />
           <Footer/>
         </BrowserRouter>
       </UserProvider>

@@ -1,35 +1,47 @@
 /* Global styles and variables */
 :root {
     /* COLORES */
-    --primary-color: #9db5b2;
-    --secondary-color: #94d1be;
-    --accent: #daf0ee;
+    --primary-color: #1C5D99;
+    --secondary-color: #BBCDE5;
+    --accent: #EBEBEB;
+    --accent2: #267DCF;
     --white: #ffffff;
-    --black: #3b413c;
+    --black: #222222;
     /* Radio de los bordes */
     --borderRadius: .5rem;
 }
-
+.no-text-dec {
+    text-decoration: none;
+}
 .btn {
     display: block!important;
     width: 100%;
-    text-decoration: none!important;
+    border: none!important;
+    border-radius: 0.25rem!important;
 }
 .btn-primary {
-    background-color: var(--white)!important;
-    border: 1px solid var(--primary-color)!important;
-    color: var(--black)!important;
-}
-.btn-primary:hover {
     background-color: var(--primary-color)!important;
     color: var(--white)!important;
-}
-.btn-terciary {
-    background-color: transparent;
     border: 2px solid var(--primary-color)!important;
 }
-.btn-terciary:hover {
+.btn-primary:hover {
+    background-color: var(--secondary-color)!important;
+    color: var(--black)!important;
+    border-color: var(--secondary-color)!important;
+}
+.btn-secondary {
+    background-color: transparent!important;
+    border: 2px solid var(--primary-color)!important;
+    color: var(--primary-color)!important;
+    font-weight: 700;
+}
+.btn-secondary:hover {
     box-shadow: inset 0 0 0 2px var(--primary-color);
+}
+.btn-item {
+    background-color: var(--white) !important;
+    border: none !important;
+    color: var(--black) !important;
 }
 .center-content {
     display: flex;
@@ -38,17 +50,14 @@
     flex-direction: column;
     gap: 2rem;
 }
-
 .container {
     width: 95%!important;
     max-width: 120rem!important;
     margin: 0 auto!important;
 }
-
 .container-fluid {
     width: 95%!important;
 }
-
 @media only screen and (min-width: 768px) {
     .btn {
         display: inline-block!important;

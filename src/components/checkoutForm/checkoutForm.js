@@ -35,8 +35,10 @@ const CheckoutForm = () => {
                         <h2 className="checkout-title">Hola! {user.name}! Gracias por comprar con nosotros!</h2>
 
                         <div className="checkout-options">
-                            <button className="btn btn-primary" onClick={logoutUser}>No soy {user.name}</button>
-                            <Link to="final-step"><button className="btn btn-secondary">Proceder a la compra</button></Link>
+                            <button className="btn btn-secondary" onClick={logoutUser}>No soy {user.name}</button>
+                            <Link className="btn btn-primary" to="final-step">
+                                Proceder a la compra
+                            </Link>
                         </div>
                     </div>
                 </>
@@ -61,7 +63,7 @@ const CheckoutForm = () => {
                             </div>
                         </fieldset>
 
-                        <button className="btn btn-secondary checkout-btn">Cargar mis datos</button>
+                        <button className="btn btn-primary checkout-btn">Cargar mis datos</button>
                     </form>
                 </>
             }

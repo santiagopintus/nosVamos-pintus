@@ -1,0 +1,21 @@
+.to-top-arrow {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: fixed;
+    width: 4.2rem;
+    height: 4.2rem;
+    bottom: 5rem;
+    right: 5rem;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.to-top-arrow .arrow-icon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}

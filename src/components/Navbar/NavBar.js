@@ -2,7 +2,7 @@ import './NavBar.css';
 import CartWidget from '../cartWidget/cartWidget';
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,15 +36,11 @@ export default function Navbar() {
                         </ul>
 
                         <div className="d-flex align-center gap-3">
-                            
-                            <Link to="/cart">
+
+                            <Link className="no-text-dec" to="/cart">
                                 <CartWidget carritoCount="2"/>
                             </Link>
                             
-                            <form className="d-flex">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -52,3 +48,5 @@ export default function Navbar() {
         </>
     );
 }
+
+export default Navbar;

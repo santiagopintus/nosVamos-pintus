@@ -18,7 +18,9 @@ const Item = ({id, title, src, price}) => {
                     <h2 className="item__title">{title}</h2>
                     <p className="item__price">${price}</p>
                     <div className="item__options">
-                        <Link to={`/item/${id}`}><button className="item__details-btn btn btn-primary">Detalles</button></Link>
+                        <Link className="btn btn-primary" to={`/item/${id}`}>
+                            Detalles
+                        </Link>
                     </div>
                 </div>
 

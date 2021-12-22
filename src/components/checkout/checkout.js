@@ -35,6 +35,7 @@ const Checkout = () => {
                     price: item.price
                 }
             }),
+            date: new Date(),
             total: cartContext.getTotal()
         };
         
@@ -90,20 +91,18 @@ const Checkout = () => {
                     </div>
 
                     <h2 className="checkout-total">Total a pagar: ${cartContext.getTotal()}</h2>
-                    <button className="btn btn-secondary" onClick={finishOrder}>Pagar</button>
+                    <button className="btn btn-primary" onClick={finishOrder}>Pagar</button>
                 </div>
                     :
                         //Si no hay items en el carrito, y todavía no se generó una orden de compra, muestra un mensaje
                         !orderId ?
                         <>
                             <Modal title="No hay productos en el carrito" content="Por favor agregue productos al carrito"
-                                button={<Link to="/">
-                                    <button className="btn btn-secondary" data-bs-dismiss="modal">Agregar Productos</button>
-                                </Link>}
+                                button={<Link className="no-text-dec" to="/"><button className="btn btn-primary" data-bs-dismiss="modal">Agregar Productos</button></Link>}
                             />
                             <div className="center-content">
                                 <h3>No hay productos para comprar</h3>
-                                <Link to="/"><button className="btn btn-secondary">Agregar productos :D</button></Link>
+                                <Link className="btn btn-primary" to="/">Agregar productos :D</Link>
                             </div>
                         </>
                         :
@@ -112,14 +111,14 @@ const Checkout = () => {
                             <Modal title="Compra realizada" content={`Gracias por tu compra! Tu número de compra es: ${orderId}`}
                                 button={
                                     <button
-                                        className="btn btn-secondary"
+                                        className="btn btn-primary"
                                         data-bs-dismiss="modal"
                                         onClick={() => copyText(orderId)}
                                     >Copiar</button>}
                             />
                             <div className="center-content">
                                 <h3>Muchas gracias por tu compra{user.name && `, ${user.name}`}!</h3>
-                                <Link to="/"><button className="btn btn-secondary">Volver al inicio</button></Link>
+                                <Link className="btn btn-primary" to="/">Volver al inicio</Link>
                             </div>
                         </>     
                 

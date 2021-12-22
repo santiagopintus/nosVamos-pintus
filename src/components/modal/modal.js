@@ -30,7 +30,7 @@ const Modal = ({title, content, button}) => {
                                 button ?
                                     button
                                     :
-                                    <button type="button" className="btn btn-secondary"                     
+                                    <button type="button" className="btn btn-primary"                     
                                     data-bs-dismiss="modal">Ok</button>
                             }
                         </div>

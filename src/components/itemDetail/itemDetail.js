@@ -51,13 +51,13 @@ const ItemDetail = ({ item }) => {
                                 :
                                 <>
                                     {/* <p className="item-detail__added">Item agregado al carrito</p> */}
-                                    <Link to="/cart">
-                                        <button className="btn btn-secondary">Terminar mi compra</button>
+                                    <Link className="btn btn-primary" to="/cart">
+                                        Terminar mi compra
                                     </Link>
                                     <Modal title="Agregado!" content="Producto agregado al carrito"
                                         button={
-                                            <Link to="/cart">
-                                                <button data-bs-dismiss="modal" className="btn btn-secondary">Ir al carrito</button>
+                                            <Link className="no-text-dec" to="/cart">
+                                                <button data-bs-dismiss="modal" className="btn btn-primary">Ir al carrito</button>
                                             </Link>
                                         }
                                     />
